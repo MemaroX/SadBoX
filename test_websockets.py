@@ -27,12 +27,12 @@ def test_websocket_interaction():
             # Step 4: Send another command to test interactivity
             websocket.send_text("whoami\n")
             response = websocket.receive_text()
-            assert "sandboxuser" in response
-
-finally:
-        # Step 5: Clean up the container
-        delete_response = client.delete(f"/sandboxes/{container_id}")
-        assert delete_response.status_code == 200, f"Failed to clean up sandbox: {delete_response.text}"
+                        assert "sandboxuser" in response
+            
+                    finally:
+                        # Step 5: Clean up the container
+                        delete_response = client.delete(f"/sandboxes/{container_id}")
+                        assert delete_response.status_code == 200, f"Failed to clean up sandbox: {delete_response.text}"
 
 def test_websocket_with_nonexistent_container():
     """
