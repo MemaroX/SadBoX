@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+docker
+requests
+rich
+pytest
+httpx
+websockets
+prompt-toolkit
+pydantic-settings
